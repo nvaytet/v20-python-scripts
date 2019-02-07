@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/nvaytet/work/code/mantid/builds/py3/bin")
+sys.path.append("/home/nvaytet/work/code/mantid/builds/py2/bin")
 from mantid.simpleapi import *
 import numpy as np
 import matplotlib.pyplot as plt

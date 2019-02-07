@@ -59,7 +59,7 @@ ncols = 2
 
 # Make figure
 fig = plt.figure()
-ratio = 3.0
+ratio = 1.0
 sizex = 20.0
 fig.set_size_inches(sizex, ratio*sizex)
 ax = []
@@ -116,7 +116,7 @@ for k in range(nth):
         summed_data[i,0] = 0.5*(summed_x[i]+summed_x[i+1])
         summed_data[i,1] = summed_y[i]
 
-    frame_parameters1 = get_wfm_windows(data=summed_data, output_format="tof", plot=True, win_threshold=0.30)
+    frame_parameters1 = get_wfm_windows(data=summed_data, output_format="tof", plot=True, win_threshold=0.30, bg_threshold=1.2e-4)
     print(frame_parameters1)
 
     # Get frame windows from background
@@ -130,7 +130,7 @@ for k in range(nth):
         summed_data_van[i,0] = 0.5*(summed_x_van[i]+summed_x_van[i+1])
         summed_data_van[i,1] = summed_y_van[i]
 
-    frame_parameters2 = get_wfm_windows(data=summed_data_van, output_format="tof", plot=True, win_threshold=0.30)
+    frame_parameters2 = get_wfm_windows(data=summed_data_van, output_format="tof", plot=True, win_threshold=0.30, bg_threshold=1.2e-4)
     print(frame_parameters2)
 
     # Make a common set of frame parameters by averaging the ones from sample and background
